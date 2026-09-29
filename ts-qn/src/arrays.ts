@@ -168,3 +168,36 @@ enum Direction {
 }
 console.log(Direction.North);
 console.log(Direction.South);
+
+// 17. Numberic Enum ( takes default values )
+enum Status {
+    Pending,
+    Approved,
+    Rejected
+}
+let currentStatus: Status = Status.Pending;
+console.log(currentStatus);
+
+// 18. Custom Enum Values 
+enum CustomStatus {
+    Pending = 1,
+    Approved = 2,
+    Rejected = 3
+};
+
+// 19. String enum 
+enum Role {
+    Admin = "ADMIN",
+    User = "USER",
+    Developer = "DEVELOPER",
+    Tester = "TESTER"
+}
+
+
+// 20. Enum With Function 
+// we can pass an enum to a 
+
+function checkRole(role: Role): void {
+    console.log(`current role: ${role}`);
+}
+checkRole(Role.Tester)
